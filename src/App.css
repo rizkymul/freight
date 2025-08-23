@@ -1,38 +1,421 @@
-.App {
-  text-align: center;
+body {
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list li {
+  margin: 0.75rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.info {
+  color: rgb(0, 49, 0);
+  background-color: rgb(230, 246, 230);
+  padding: 1rem;
+  border-radius: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.accordion {
+  border-top: 1px solid #ccc;
+  margin-top: 1rem;
+}
+
+.item {
+  border-bottom: 1px solid #ccc;
+}
+
+.itemBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: left;
+  color: #2A2A2A;
+  background-color: transparent;
+  border: none;
+}
+
+.itemBtn:hover {
+  background-color: #f3f3f3;
+}
+
+.itemBtnExpanded {
+  background-color: #e7e7e7;
+}
+
+.itemContent {
+  transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.itemPanel {
+  padding: 1rem;
+}
+
+.chevron {
+  margin-left: auto;
+  transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.itemBtnExpanded .chevron {
+  transform: rotate(180deg);
+}
+
+
+.logoDiv{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.logoDiv p{
+  font-size: 20px;
+  font-weight: 600;
+}
+.menuTopbar{
+  display: flex;
+  gap: 24px;
+}
+.colorOrange{
+  color: #EB9147;
+}
+.colorPrimary{
+  color: #2A2A2A
+}
+.colorSecondary{
+  color: grey
+}
+.btnOrange{
+  background-color: #FF8D2B;
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.hero{
+  margin-top: 40px;
+  margin-right: 24px;
+  margin-left: 24px;
+  height: 70vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 40px;
+  border-radius: 18px;
+  background-image: url("./bgFreight.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.heroTop{
+  width: 50%;
+}
+.heroBottom{
+  display: flex;
+  justify-content: space-between;
+}
+.hbl{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px
+}
+.hbl p{
+  color:white
+}
+.hbl div{
+  display: flex;
+  gap: 24px
+}
+.btnWhite{
+  border: none;
+  background: white;
+  font-size: 14px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btnWhiteBorder{
+  background: none;
+  border: 1px solid white;
+  font-size: 14px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+}
+.hbr{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color:white;
+
+  font-size: 14px
+}
+.k1{
+  font-size: 24px;
+  font-weight: 600;
+}
+.hbr div{
+  margin-top: 12px;
+  display: flex;
+}
+.hbr div img{ 
+  border: 1px solid;
+  margin-left: -4px;
+  border-radius: 100px;
+}
+
+.benefit{
+  margin-top: 40px;
+  margin-right: 24px;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.secDesc{
+  margin-bottom: 56px
+}
+
+.secDesc div{
+  display: flex;
+  margin-top: 8px;
+}
+
+.secDesc div div{
+  width: 50%;
+  display: flex;
+  align-items: flex-end;  
+}
+
+.secDesc span{
+  color: #595959;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.cardFirst{
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #F6F6F6;
+  padding: 24px 24px;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  gap: 14px;
+
+  transition: 0.5s;
+}
+.cardFirst span{
+  font-size: 18px;
+  font-weight: 600;
+  color: grey;
+}
+.cardFirst:hover {
+  transition: 0.5s;
+
+  background-color: #FAECE1;
+}
+.cardFirst:hover span{
+  transition: 0.5s;
+
+  color: #F0A96D
+}
+.titleCard{
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.listCard{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ourservice{
+  margin: 120px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardSecond{
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* background-image: url("./bgFreight.jpg"); */
+  background-size: cover;
+  background-position: center;
+  padding: 24px 24px;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  gap: 14px;
+
+  transition: 0.5s;
+}
+
+.cardSecond div{
+  background: white;
+  padding: 8px 16px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+
+.aboutus{
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(241, 241, 241);
+}
+
+.big{
+  font-size: 36px;
+  text-align: justify;
+  letter-spacing: -2px;
+}
+
+.ship{
+  margin-top: 32px;
+
+  width: 100%;
+  height: 400px;
+  background-image: url('./bgFreight.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px 0px;
+}
+
+.ship div{
+  padding: 0px 24px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.ship div div{
+  display: flex;
+  flex-direction: column;
+}
+
+.bbig{
+  font-size: 56px;
+  color: white;
+  font-weight: 600;
+}
+
+.btext{
+  font-size: 18px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ourpartner{
+  margin: 80px 24px;
+  display: flex;
+  gap: 12px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ourpartner div{
+  flex: 1
+}
+
+.listPartner{
+  /* padding: 24px; */
+  background-color: rgb(241, 241, 241);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+    border: 1px solid lightgray;
+}
+
+.listPartner div{
+  display: flex;
+  justify-content: space-between;
+}
+.listPartner div img {
+      padding: 24px;
+      width:180px;
+      height: 60px;
+}
+
+.testimonial{
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(241, 241, 241);
+}
+
+.faq{
+  margin: 80px 24px;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.faq div{
+  flex: 1;
+}
+footer{
+  background-color: #282828;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px
+}
+.footerTop{
+  display: flex;
+  gap: 24px;
+}
+.footerTop div{
+  flex: 1;
+}
+.ftl{
+  background-color: #333333;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+.ftitle{
+  color: white;
+  font-size: 32px;
+}
+.ftext{
+  color: grey;
+  font-weight: 600;
+}
+.ftl button{
+  width: max-content;
+}
+
+.ftr{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ftr p{
+  color: white;
+  font-size: 18px;
+}
+
+
+.footerBottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footerBottom div{
+  display: flex;
+  gap: 12px
+}
+.footerBottom div p{
+  color: white;
 }
