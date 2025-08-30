@@ -1,7 +1,16 @@
 import './App.css';
 import logo from './logo.png'
+import log from './log.png'
 import bg from './bgFreight.jpg'
 import test from './testimoni.png'
+import tes1 from './tes1.png'
+import tes2 from './tes2.png'
+import tes3 from './tes3.png'
+import tes4 from './tes4.png'
+import card1 from './1.png'
+import card2 from './2.png'
+import card3 from './3.png'
+import point from './point.png'
 
 import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
 import chevronDown from "./chevron-down.svg";
@@ -70,17 +79,17 @@ function App() {
 
     const listCardSecond = [
         {
-            img: bg,
+            img: card1,
             title: "Global Freight Forwarding",
             text: "Navigate the complexities of international trade with our expert freight forwarding service"
         },
         {
-            img: bg,
+            img: card2,
             title: "Intelligent Warehousing",
             text: "Navigate the complexities of international trade with our expert freight forwarding service"
         },
         {
-            img: bg,
+            img: card3,
             title: "Domestic Trucking & FTL/LTL",
             text: "Navigate the complexities of international trade with our expert freight forwarding service"
         },
@@ -105,14 +114,14 @@ function App() {
         },
     ]
 
-    const partner1 = [test, test]
+    const partner1 = [tes1, tes2]
 
     return (
         <div className="App">
             <header>
                 <div className='logoDiv'>
-                    <img src={logo} width={50} height={50}/>
-                    <p>Freight</p>
+                    <img src={log} width={124} />
+                    {/* <p>Freight</p> */}
                 </div>
 
                 <div className='menuTopbar'>
@@ -162,7 +171,7 @@ function App() {
                             <h2>We Believe we can be tour best logistics partner.</h2>
                         </div>
                         <div>
-                            <p className='colorSecondary' style={{ fontWeight: '500' }}>In a world of complex supply chains, we believe that great logisctics is the backbone of great business. We go beyond simply moving goods-we provide the strategic tools and partnership you need to gain a competitive edge.</p>
+                            <p className='colorSecondary' style={{ fontWeight: '400', lineHeight: '22px', paddingRight: '2%' }}>In a world of complex supply chains, we believe that great logisctics is the backbone of great business. We go beyond simply moving goods-we provide the strategic tools and partnership you need to gain a competitive edge.</p>
                         </div>
                     </div>
                 </div>
@@ -186,7 +195,7 @@ function App() {
                             <h2>Our Comprehensive Logistics Solution</h2>
                         </div>
                         <div>
-                            <p className='colorSecondary' style={{ fontWeight: '500' }}>We are a full-service logistics provider offering end-to-end solutions, including fulfillment, last-mile delivery, and returns management. We cater to industries such as e-commerce, retail, and electronics with our advanced software and global network.</p>
+                            <p className='colorSecondary' style={{ fontWeight: '400', lineHeight: '22px', paddingRight: '2%' }}>We are a full-service logistics provider offering end-to-end solutions, including fulfillment, last-mile delivery, and returns management. We cater to industries such as e-commerce, retail, and electronics with our advanced software and global network.</p>
                         </div>
                     </div>
                 </div>
@@ -197,7 +206,7 @@ function App() {
                             {/* <img src={bg}/> */}
                             <div>
                                 <p className='titleCard colorPrimary'>{item.title}</p>
-                                <p className='colorSecondary'>{item.text}</p>
+                                <p className='colorSecondary' style={{ lineHeight: '24px' }}>{item.text}</p>
                             </div>
                         </div>
                     )} 
@@ -342,18 +351,22 @@ function App() {
                     <div className='ftr'>
                         <div>
                             <p>Menu</p>
-                            <p>Menu</p>
-                            <p>Menu</p>
+                            <p>Home</p>
+                            <p>Service</p>
+                            <p>Solutions</p>
+                            <p>Tracking</p>
                         </div>
                         <div>
-                            <p>Menu</p>
-                            <p>Menu</p>
-                            <p>Menu</p>
+                            <p>Company</p>
+                            <p>About Us</p>
+                            <p>Our Team</p>
+                            <p>Contact Us</p>
                         </div>
                         <div>
-                            <p>Menu</p>
-                            <p>Menu</p>
-                            <p>Menu</p>
+                            <p>Services</p>
+                            <p>Global Freight Forwarding</p>
+                            <p>Intelligent Warehousing</p>
+                            <p>Domestic Trucking FTL/LTL</p>
                         </div>
                     </div>
                 </div>
